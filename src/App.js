@@ -4,8 +4,7 @@ function App() {
   return (
     <div className="App">
       <img src='/logo192.png' alt=''/>
-      <img src={logo}/>
-      <h1 style={{color:"red", backgroundColor:"tomato", display:"inline"}}>Test</h1>
+      <h1 style={{color:"red", backgroundColor:"tomato", display:"inline-block", height:"300px"}}>Test</h1>
     </div>
   );
 }
