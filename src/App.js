@@ -1,9 +1,7 @@
 import './tailwind.css';
 import { createElement } from 'react';
-
-function Button(props){
-  return <button>{props.text}</button>
-}
+import Button from "./components/Button";
+import Tab from "./components/Tab"
 
 function App() {
   // const h1=createElement('h1', null, 'eben be eben');
@@ -20,17 +18,28 @@ function App() {
   }
   return (
     <main>
-      <h1 style={{color:'tomato', fontWeight:'700', fontSize:'45px'}}>Anan be anan</h1>
+      {/* <h1 style={{color:'tomato', fontWeight:'700', fontSize:'45px'}}>Anan be anan</h1>
       <label htmlFor='search' onClick={anan}>Arama</label>
-      <input type='text' id='search' tabIndex="1"/>
-      <Button text='merhaba aq'/>
-      <ul>
+      <input type='text' id='search' tabIndex="1"/> */}
+      <div style={{padding:"20px"}}>
+        <Tab activeTab={1}>
+          <Tab.Panel  title="Profil">1. tab</Tab.Panel>
+          <Tab.Panel title="Hakkında">2. tab</Tab.Panel>
+          <Tab.Panel title="Ayarlar">3. tab</Tab.Panel>
+        </Tab>
+      </div>
+
+      <Button variant="default" >beanan</Button>
+      <Button variant="success">beanan</Button>
+      <Button variant="warning">beanan</Button>
+      <Button variant="danger">beanan</Button>
+      {/* <ul>
         {todos.map((todo, index)=>
             <li key={index}>
               {todo +" "+ name.toUpperCase()}
             </li>
-        )}
-      </ul>
+        )} */}
+      {/* </ul> */}
     </main>
   );
 }
