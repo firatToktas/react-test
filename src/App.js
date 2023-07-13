@@ -2,6 +2,7 @@
 import { createElement, useState } from 'react';
 import Button from "./components/Button";
 import Tab from "./components/Tab"
+import Refden from "./components/Refdene"
 import Test from "./Test.js"
 
 function App() {
@@ -23,22 +24,27 @@ function App() {
       {/* <h1 style={{color:'tomato', fontWeight:'700', fontSize:'45px'}}>Anan be anan</h1>
       <label htmlFor='search' onClick={anan}>Arama</label>
       <input type='text' id='search' tabIndex="1"/> */}
-      <button onClick={()=> setShow(show=> !show)}>
+      
+      {/*  ELMAN GİZLE GÖSTER */}
+      {/* <button onClick={()=> setShow(show=> !show)}>
         {show ? 'Gizle' :'Göster'}
       </button>
       {show && <Test/>}
+       */}
+      
+      <Refden/>
       
       
-      {/* tab menüsü */}
+      {/* TAB MENÜSÜ */}
       {/* <div style={{padding:"20px"}}>
         <Tab activeTab={1}>
           <Tab.Panel  title="Profil">1. tab</Tab.Panel>
           <Tab.Panel title="Hakkında">2. tab</Tab.Panel>
           <Tab.Panel title="Ayarlar">3. tab</Tab.Panel>
         </Tab>
-      </div>
+    </div> */}
 
-      <Button variant="default" >beanan</Button>
+      {/*<Button variant="default" >beanan</Button>
       <Button variant="success">beanan</Button>
       <Button variant="warning">beanan</Button>
       <Button variant="danger">beanan</Button> */}

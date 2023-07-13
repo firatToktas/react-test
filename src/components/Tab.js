@@ -1,16 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Tab({children,activeTab}){
     const [active , setActive]=useState(activeTab); //setActive çalışıtğı zaman hangi butona tıklnadıysa onun indexini active set ediyor 
-    
-    // useEffect(()=>{ //useEffect burada activeTab'ı dinliyor activeTab değiştiğinde bu fonkisyon çalışacak, ama şuan gereksiz
-    //     setActive(activeTab)
-    // },[activeTab])
-    
+    console.log(children);
+    console.log(active);
     return(
         <div>
             <nav>
-                {children.map((tab,index)=> 
+                {children.map((tab,index)=>
                 <button
                 onClick={()=> setActive(index)}
                 className={active ===index ? 'bg-green-200' : 'bg-gray-200'} 
@@ -25,7 +22,7 @@ function Tab({children,activeTab}){
 
 Tab.Panel=function({children, title}){
     return(
-        <div>{children}</div>
+        <div>{children} {" "} {title}</div>
     )
 }
 

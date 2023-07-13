@@ -24,7 +24,7 @@ function App(){
         <div>
             <h3>{postID}</h3>
             <div>
-            {post && JSON.stringify(post)}
+            {post && JSON.stringify(post)}  //eğer post varsa JSON.stringify ederek postu göster
             </div>
             <button onClick={()=>setpostID(postID=> postID+1)}>Sonraki Konu</button>
             <hr/>
