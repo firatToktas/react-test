@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import Tab from "./components/Tab"
 import Refden from "./components/Refdene"
 import Test from "./Test.js"
+import Todo from "./components/Todo"
 
 function App() {
   // const h1=createElement('h1', null, 'eben be eben');
@@ -32,8 +33,10 @@ function App() {
       {show && <Test/>}
        */}
       
-      <Refden/>
-      
+      {/* useRef KULLANIMI*/}
+      {/* <Refden/> */}
+
+       <Todo/>
       
       {/* TAB MENÜSÜ */}
       {/* <div style={{padding:"20px"}}>
