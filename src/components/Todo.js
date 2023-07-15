@@ -13,13 +13,15 @@ function TodoApp(){
         setTodo('');
     }
     return (
-        <>
+        <>  
+        <form onSubmit={addTodo}>
             <input type="text" value={todo} onChange={addTodo}/>
             <button type="submit" onClick={printTodo} disabled={!todo}>Ekle</button>
+        </form>
             <ul>
             {todos.map((todo, index)=>(
                 <li key={index}>{todo}</li>
-            ))}
+                ))}
             </ul>
         </>
     )
