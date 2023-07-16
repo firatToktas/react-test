@@ -1,6 +1,8 @@
 import { useState } from "react";
-
+import Header from "./Memoization";
 function TodoApp(){
+
+    console.log('app render');
     const [todo, setTodo]=useState('');
     const [todos, setTodos]=useState([]);
 
@@ -11,9 +13,11 @@ function TodoApp(){
     const printTodo=()=>{
         setTodos([...todos, todo]);
         setTodo('');
+        console.log('gönderdi');
     }
     return (
         <>  
+        <Header></Header>
         <form onSubmit={addTodo}>
             <input type="text" value={todo} onChange={addTodo}/>
             <button type="submit" onClick={printTodo} disabled={!todo}>Ekle</button>
