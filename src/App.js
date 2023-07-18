@@ -36,7 +36,7 @@ function App() {
       {/* useRef KULLANIMI*/}
       {/* <Refden/> */}
 
-       <Todo/>
+       {/* <Todo/> */}
       
       {/* TAB MENÜSÜ */}
       {/* <div style={{padding:"20px"}}>
